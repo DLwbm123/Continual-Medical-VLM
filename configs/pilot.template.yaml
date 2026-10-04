@@ -1,0 +1,102 @@
+# Template, NOT a runnable training configuration. Required nulls must be resolved.
+# Values below are proposed engineering defaults, not paper hyperparameters.
+project:
+  name: medical_concept_continual_pilot
+  research_phase: M0
+  auto_download_datasets: false
+  paid_services_allowed: false
+  assumes_novelty_confirmed: false
+
+data:
+  roots: []
+  manifest: null
+  concept_annotations: null
+  concept_dictionary: null
+  source_versions: {}
+  group_id_field: patient_id
+  missing_group_ids_policy: report_unverified_do_not_invent
+  read_only_sources: true
+  test_labels_visible_to_model: false
+
+protocol:
+  type: task_incremental
+  task_id_at_inference: true
+  task_order: []  # resolve from real data, not guessed names
+  concept_anchor_task: null
+  future_task_training_data_access: false
+  test_feedback_for_selection: false
+  final_eval_split_locked: false
+  training_seed: 0
+  order_seed: 0
+
+model:
+  backbone: microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+  revision: null
+  medcbr_reference_commit: null
+  architecture: multitask
+  train_vision: true
+  train_text: false
+  train_current_heads: true
+  freeze_old_heads_after_acquisition: true
+  context_length: 256
+  feature_dimension: null  # discover and assert at runtime
+  use_generated_reasoning: false
+  test_time_oracle_roi: false
+
+concepts:
+  group_specification: null  # categorical / binary / multilabel, per group
+  unannotated_is_negative: false
+  not_applicable_is_negative: false
+  not_assessable_is_negative: false
+  preserve_original_missingness_reason: true
+  primary_test_requires_image_level_verified_labels: true
+  infer_concepts_from_disease_label: false
+  primary_kd_requires_verified_label_and_correct_teacher: true
+  report_kd_coverage_per_concept: true
+
+text:
+  initial_source: templates_from_verified_training_findings
+  inject_diagnosis_into_finding_description: false
+  duplicate_descriptions_are_false_negatives: false
+  missing_findings_fallback: task_class_text_alignment
+  inference_uses_ground_truth_report: false
+
+training:
+  optimizer: AdamW
+  backbone_lr: 0.00001
+  head_lr: 0.0001
+  weight_decay: 0.01
+  current_effective_batch: 32
+  replay_batch: 16
+  updates_per_task: 1000
+  smoke_updates: 20
+  alpha_concept: 1.0
+  beta_vl: 1.0
+  lambda_diagnosis_kd: 1.0
+  lambda_concept_kd: 1.0
+  tuning_split: validation_only
+  gradient_accumulation: resolve_from_hardware
+
+replay:
+  samples_per_class_max: 20
+  selection: class_stratified_random
+  selection_seed: 0
+  identical_ids_across_replay_methods: true
+  permit_old_training_images: true
+  permit_full_history_training_access: false
+  include_verified_concept_supervision_in_all_replay_methods: true
+  selection_uses_test_concepts: false
+
+experiments:
+  first_round: [single_task_validation]
+  second_round: [sequential, replay, replay_diagnosis_kd, replay_diagnosis_and_concept_kd]
+  postpone: [full_11_tasks, llm_reasoning, clinical_routing, evidence_intervention]
+
+evaluation:
+  save_raw_probabilities: true
+  save_task_matrix: true
+  save_concept_matrix: true
+  save_per_concept_support: true
+  undefined_auc: null_with_reason
+  bootstrap_unit: patient_if_verified_else_report_limitation
+  report_concept_accuracy_as_diagnostic_faithfulness: false

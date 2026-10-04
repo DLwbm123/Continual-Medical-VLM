@@ -1,0 +1,38 @@
+AUDITED fixture 3 errors 0
+AUDITED fixture 3 errors 2
+test_manifest_preserves_missingness (test_adapter.AdapterTests.test_manifest_preserves_missingness) ... ok
+test_mask_excluded_from_classification (test_adapter.AdapterTests.test_mask_excluded_from_classification) ... ok
+test_same_source_path_leakage_reported (test_adapter.AdapterTests.test_same_source_path_leakage_reported) ... ok
+test_all_missing_batch_is_differentiable_zero (test_concepts.ConceptTests.test_all_missing_batch_is_differentiable_zero) ... ok
+test_fixed_vocabulary_uses_no_sample_truth_or_names (test_concepts.ConceptTests.test_fixed_vocabulary_uses_no_sample_truth_or_names) ... ok
+test_rare_category_is_not_reported_as_defined_full_auc (test_concepts.ConceptTests.test_rare_category_is_not_reported_as_defined_full_auc) ... <environment>/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+ok
+test_source_multiselect_and_missing_semantics (test_concepts.ConceptTests.test_source_multiselect_and_missing_semantics) ... ok
+test_split_is_deterministic_disjoint_and_keeps_case_units (test_concepts.ConceptTests.test_split_is_deterministic_disjoint_and_keeps_case_units) ... ok
+test_ce_and_bce_masks_and_group_normalization (test_core.CoreTests.test_ce_and_bce_masks_and_group_normalization) ... ok
+test_duplicate_descriptions_are_multi_positive (test_core.CoreTests.test_duplicate_descriptions_are_multi_positive) ... ok
+test_expanding_tasks_does_not_reset_old_weights (test_core.CoreTests.test_expanding_tasks_does_not_reset_old_weights) ... ok
+test_inference_accepts_images_and_task_not_truth_or_filename (test_core.CoreTests.test_inference_accepts_images_and_task_not_truth_or_filename) ... ok
+test_missing_na_unassessable_are_not_negative (test_core.CoreTests.test_missing_na_unassessable_are_not_negative) ... ok
+test_patient_split_overlap_detected_unknowns_not_claimed_verified (test_core.CoreTests.test_patient_split_overlap_detected_unknowns_not_claimed_verified) ... ok
+test_replay_ids_shared_and_train_only (test_core.CoreTests.test_replay_ids_shared_and_train_only) ... ok
+test_resume_matches_uninterrupted_stochastic_training (test_core.CoreTests.test_resume_matches_uninterrupted_stochastic_training) ... ok
+test_single_class_auc_is_na_with_reason (test_core.CoreTests.test_single_class_auc_is_na_with_reason) ... <environment>/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+ok
+test_teacher_is_frozen_and_identical_eval_kd_is_zero (test_core.CoreTests.test_teacher_is_frozen_and_identical_eval_kd_is_zero) ... ok
+test_teacher_wrong_or_unknown_concepts_are_not_distilled (test_core.CoreTests.test_teacher_wrong_or_unknown_concepts_are_not_distilled) ... ok
+test_duplicates_and_headers_only (test_inventory.InventoryTests.test_duplicates_and_headers_only) ... ok
+test_json_keys_only (test_inventory.InventoryTests.test_json_keys_only) ... ok
+test_no_label_inference_and_read_only (test_inventory.InventoryTests.test_no_label_inference_and_read_only) ... ok
+test_no_overwrite (test_inventory.InventoryTests.test_no_overwrite) ... ok
+test_output_under_root_rejected (test_inventory.InventoryTests.test_output_under_root_rejected) ... ok
+test_overlap_rejected (test_inventory.InventoryTests.test_overlap_rejected) ... ok
+test_symlink_skipped (test_inventory.InventoryTests.test_symlink_skipped) ... ok
+test_truncation (test_inventory.InventoryTests.test_truncation) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 2.844s
+
+OK

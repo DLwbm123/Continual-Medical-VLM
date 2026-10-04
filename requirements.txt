@@ -1,0 +1,14 @@
+# Existing CUDA runtime is reused read-only; exact installed versions are reported.
+torch==2.7.1
+torchvision==0.22.1
+open_clip_torch==3.1.0
+timm==1.0.19
+transformers==4.51.3
+huggingface-hub==0.30.2
+numpy==1.26.4
+scikit-learn==1.5.2
+Pillow==12.3.0
+PyYAML==6.0.3
+ftfy==6.3.1
+wcwidth==0.2.13
+

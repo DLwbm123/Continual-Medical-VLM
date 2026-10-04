@@ -1,0 +1,171 @@
+{
+  "protocol": "classification engineering feasibility only",
+  "runtime": {
+    "feature_dimension": 512,
+    "context_length": 256,
+    "preprocess": "Full-frame aspect-preserving letterbox to 224, then checkpoint evaluation transform; no random augmentation",
+    "text_prompts": [
+      "a breast ultrasound image showing benign tumor.",
+      "a breast ultrasound image showing malignant tumor.",
+      "a breast ultrasound image showing normal scan."
+    ],
+    "trainable_parameters": 86193411,
+    "frozen_text_parameters": 109710848,
+    "concept_heads": 0,
+    "concept_truth": "absent",
+    "test_evaluated": false,
+    "gpu": "NVIDIA RTX PRO 5000 72GB Blackwell"
+  },
+  "evaluations": {},
+  "zero_shot_validation": {
+    "accuracy": 0.41935483870967744,
+    "balanced_accuracy": 0.5447560102732517,
+    "macro_f1": 0.40812993153418686,
+    "macro_ovr_auc": 0.7504903924055855,
+    "auc_undefined_reason": null,
+    "per_class_auc": {
+      "0": 0.7065584854631507,
+      "1": 0.7323008849557522,
+      "2": 0.8126118067978534
+    },
+    "support": {
+      "0": {
+        "positive": 87,
+        "negative": 68
+      },
+      "1": {
+        "positive": 42,
+        "negative": 113
+      },
+      "2": {
+        "positive": 26,
+        "negative": 129
+      }
+    },
+    "n": 155
+  },
+  "overfit_before": {
+    "diagnosis": {
+      "accuracy": 0.3333333333333333,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_f1": 0.2638888888888889,
+      "macro_ovr_auc": 0.4557291666666667,
+      "auc_undefined_reason": null,
+      "per_class_auc": {
+        "0": 0.4140625,
+        "1": 0.5859375,
+        "2": 0.3671875
+      },
+      "support": {
+        "0": {
+          "positive": 8,
+          "negative": 16
+        },
+        "1": {
+          "positive": 8,
+          "negative": 16
+        },
+        "2": {
+          "positive": 8,
+          "negative": 16
+        }
+      },
+      "n": 24
+    },
+    "vision_language": {
+      "accuracy": 0.625,
+      "balanced_accuracy": 0.625,
+      "macro_f1": 0.5686392914653785,
+      "macro_ovr_auc": 0.90625,
+      "auc_undefined_reason": null,
+      "per_class_auc": {
+        "0": 0.9140625,
+        "1": 0.828125,
+        "2": 0.9765625
+      },
+      "support": {
+        "0": {
+          "positive": 8,
+          "negative": 16
+        },
+        "1": {
+          "positive": 8,
+          "negative": 16
+        },
+        "2": {
+          "positive": 8,
+          "negative": 16
+        }
+      },
+      "n": 24
+    },
+    "concept": null,
+    "concept_unavailable_reason": "No verified image-level concept annotations"
+  },
+  "overfit_after": {
+    "diagnosis": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "macro_ovr_auc": 1.0,
+      "auc_undefined_reason": null,
+      "per_class_auc": {
+        "0": 1.0,
+        "1": 1.0,
+        "2": 1.0
+      },
+      "support": {
+        "0": {
+          "positive": 8,
+          "negative": 16
+        },
+        "1": {
+          "positive": 8,
+          "negative": 16
+        },
+        "2": {
+          "positive": 8,
+          "negative": 16
+        }
+      },
+      "n": 24
+    },
+    "vision_language": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "macro_ovr_auc": 1.0,
+      "auc_undefined_reason": null,
+      "per_class_auc": {
+        "0": 1.0,
+        "1": 1.0,
+        "2": 1.0
+      },
+      "support": {
+        "0": {
+          "positive": 8,
+          "negative": 16
+        },
+        "1": {
+          "positive": 8,
+          "negative": 16
+        },
+        "2": {
+          "positive": 8,
+          "negative": 16
+        }
+      },
+      "n": 24
+    },
+    "concept": null,
+    "concept_unavailable_reason": "No verified image-level concept annotations"
+  },
+  "overfit_gate_passed": true,
+  "status": "complete",
+  "updates": 100,
+  "elapsed_seconds": 42.65695254597813,
+  "peak_cuda_allocated_bytes": 3426194432,
+  "seed": 0,
+  "concept_stage_gate_passed": false,
+  "concept_stage_gate_reason": "Verified image-level concepts are unavailable"
+}

@@ -1,0 +1,522 @@
+{
+  "schema": 1,
+  "datasets": {
+    "BTMRI": {
+      "class_names": {
+        "0": "glioma tumor",
+        "1": "meningioma tumor",
+        "2": "pituitary tumor",
+        "3": "normal brain"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 660,
+          "1": 669,
+          "2": 728,
+          "3": 797
+        },
+        "val": {
+          "0": 264,
+          "1": 267,
+          "2": 291,
+          "3": 319
+        },
+        "test": {
+          "0": 397,
+          "1": 403,
+          "2": 438,
+          "3": 479
+        }
+      },
+      "num_images": 5712,
+      "image_bytes": 112420659,
+      "modes": {
+        "RGB": 5712
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "BUSI": {
+      "class_names": {
+        "0": "benign tumor",
+        "1": "malignant tumor",
+        "2": "normal scan"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 218,
+          "1": 105,
+          "2": 66
+        },
+        "val": {
+          "0": 87,
+          "1": 42,
+          "2": 26
+        },
+        "test": {
+          "0": 132,
+          "1": 63,
+          "2": 41
+        }
+      },
+      "num_images": 780,
+      "image_bytes": 265595029,
+      "modes": {
+        "RGB": 780
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "CHMNIST": {
+      "class_names": {
+        "0": "adipose tissue",
+        "1": "complex stroma",
+        "2": "debris",
+        "3": "empty background",
+        "4": "immune cells",
+        "5": "normal mucosal glands",
+        "6": "simple stroma",
+        "7": "tumour epithelium"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 312,
+          "1": 312,
+          "2": 312,
+          "3": 312,
+          "4": 312,
+          "5": 312,
+          "6": 312,
+          "7": 312
+        },
+        "val": {
+          "0": 125,
+          "1": 125,
+          "2": 125,
+          "3": 125,
+          "4": 125,
+          "5": 125,
+          "6": 125,
+          "7": 125
+        },
+        "test": {
+          "0": 188,
+          "1": 188,
+          "2": 188,
+          "3": 188,
+          "4": 188,
+          "5": 188,
+          "6": 188,
+          "7": 188
+        }
+      },
+      "num_images": 5000,
+      "image_bytes": 330894928,
+      "modes": {
+        "RGB": 5000
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "COVID_19": {
+      "class_names": {
+        "0": "covid lungs",
+        "1": "lung opacity lungs",
+        "2": "viral pneumonia lungs",
+        "3": "normal lungs"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 1808,
+          "1": 3006,
+          "2": 672,
+          "3": 5096
+        },
+        "val": {
+          "0": 723,
+          "1": 1202,
+          "2": 269,
+          "3": 2038
+        },
+        "test": {
+          "0": 1085,
+          "1": 1804,
+          "2": 404,
+          "3": 3058
+        }
+      },
+      "num_images": 21165,
+      "image_bytes": 775412197,
+      "modes": {
+        "L": 21025,
+        "RGB": 140
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "CTKidney": {
+      "class_names": {
+        "0": "cyst kidney",
+        "1": "kidney stone",
+        "2": "kidney tumor",
+        "3": "normal kidney"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 1854,
+          "1": 688,
+          "2": 1141,
+          "3": 2538
+        },
+        "val": {
+          "0": 741,
+          "1": 275,
+          "2": 456,
+          "3": 1015
+        },
+        "test": {
+          "0": 1114,
+          "1": 414,
+          "2": 686,
+          "3": 1524
+        }
+      },
+      "num_images": 12446,
+      "image_bytes": 1661580918,
+      "modes": {
+        "RGB": 12446
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "DermaMNIST": {
+      "class_names": {
+        "0": "actinic keratosis",
+        "1": "basal cell carcinoma",
+        "2": "benign keratosis",
+        "3": "dermatofibroma",
+        "4": "melanoma",
+        "5": "melanocytic nevus",
+        "6": "vascular lesion"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 227,
+          "1": 359,
+          "2": 769,
+          "3": 80,
+          "4": 779,
+          "5": 4693,
+          "6": 99
+        },
+        "val": {
+          "0": 33,
+          "1": 52,
+          "2": 110,
+          "3": 12,
+          "4": 111,
+          "5": 671,
+          "6": 14
+        },
+        "test": {
+          "0": 66,
+          "1": 103,
+          "2": 220,
+          "3": 23,
+          "4": 223,
+          "5": 1341,
+          "6": 29
+        }
+      },
+      "num_images": 10014,
+      "image_bytes": 672660853,
+      "modes": {
+        "RGB": 10014
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "KneeXray": {
+      "class_names": {
+        "0": "healthy knee",
+        "1": "doubtful osteoarthritis",
+        "2": "minimal osteoarthritis",
+        "3": "moderate osteoarthritis",
+        "4": "severe osteoarthritis"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 2286,
+          "1": 1046,
+          "2": 1516,
+          "3": 757,
+          "4": 173
+        },
+        "val": {
+          "0": 328,
+          "1": 153,
+          "2": 212,
+          "3": 106,
+          "4": 27
+        },
+        "test": {
+          "0": 639,
+          "1": 296,
+          "2": 447,
+          "3": 223,
+          "4": 51
+        }
+      },
+      "num_images": 8260,
+      "image_bytes": 179200205,
+      "modes": {
+        "L": 8260
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "Kvasir": {
+      "class_names": {
+        "0": "dyed lifted polyps",
+        "1": "dyed resection margins",
+        "2": "esophagitis",
+        "3": "normal cecum",
+        "4": "normal pylorus",
+        "5": "normal z line",
+        "6": "polyps",
+        "7": "ulcerative colitis"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 250,
+          "1": 250,
+          "2": 250,
+          "3": 250,
+          "4": 250,
+          "5": 250,
+          "6": 250,
+          "7": 250
+        },
+        "val": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100
+        },
+        "test": {
+          "0": 150,
+          "1": 150,
+          "2": 150,
+          "3": 150,
+          "4": 150,
+          "5": 150,
+          "6": 150,
+          "7": 150
+        }
+      },
+      "num_images": 4000,
+      "image_bytes": 1252190557,
+      "modes": {
+        "RGB": 4000
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "LungColon": {
+      "class_names": {
+        "0": "colon adenocarcinoma",
+        "1": "colon benign tissue",
+        "2": "lung adenocarcinoma",
+        "3": "lung benign tissue",
+        "4": "lung squamous cell carcinoma"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 2500,
+          "1": 2500,
+          "2": 2500,
+          "3": 2500,
+          "4": 2500
+        },
+        "val": {
+          "0": 1000,
+          "1": 1000,
+          "2": 1000,
+          "3": 1000,
+          "4": 1000
+        },
+        "test": {
+          "0": 1500,
+          "1": 1500,
+          "2": 1500,
+          "3": 1500,
+          "4": 1500
+        }
+      },
+      "num_images": 25000,
+      "image_bytes": 1889443507,
+      "modes": {
+        "RGB": 25000
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "OCTMNIST": {
+      "class_names": {
+        "0": "choroidal neovascularization",
+        "1": "diabetic macular edema",
+        "2": "drusen",
+        "3": "normal OCT scan"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 33483,
+          "1": 10213,
+          "2": 7754,
+          "3": 46026
+        },
+        "val": {
+          "0": 3721,
+          "1": 1135,
+          "2": 862,
+          "3": 5114
+        },
+        "test": {
+          "0": 250,
+          "1": 250,
+          "2": 250,
+          "3": 250
+        }
+      },
+      "num_images": 109308,
+      "image_bytes": 3129847771,
+      "modes": {
+        "L": 109308
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    },
+    "RETINA": {
+      "class_names": {
+        "0": "diabetic retinopathy",
+        "1": "glaucoma",
+        "2": "cataract",
+        "3": "normal retina"
+      },
+      "split_class_counts": {
+        "train": {
+          "0": 549,
+          "1": 503,
+          "2": 519,
+          "3": 537
+        },
+        "val": {
+          "0": 219,
+          "1": 201,
+          "2": 207,
+          "3": 214
+        },
+        "test": {
+          "0": 330,
+          "1": 303,
+          "2": 312,
+          "3": 323
+        }
+      },
+      "num_images": 4217,
+      "image_bytes": 772224274,
+      "modes": {
+        "RGB": 4217
+      },
+      "capability": "A",
+      "verified_concept_labels": 0,
+      "provided_patient_ids": 0,
+      "provided_lesion_ids": 0,
+      "provided_slide_ids": 0,
+      "provided_masks": 0,
+      "unreferenced_images": 0,
+      "errors": [],
+      "header_check": "all referenced image headers opened; pixels not exhaustively decoded"
+    }
+  },
+  "errors": [],
+  "data_modified": false,
+  "patient_independence": "unverified: publisher splits have no group IDs",
+  "concept_truth": "absent: records contain path, diagnosis ID and class name only",
+  "duplicate_scope": "same source path only; no image hashes or near-duplicate audit",
+  "status": "passed_classification_structure"
+}

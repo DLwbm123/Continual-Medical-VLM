@@ -1,0 +1,13 @@
+test_duplicates_and_headers_only (test_inventory.InventoryTests.test_duplicates_and_headers_only) ... ok
+test_json_keys_only (test_inventory.InventoryTests.test_json_keys_only) ... ok
+test_no_label_inference_and_read_only (test_inventory.InventoryTests.test_no_label_inference_and_read_only) ... ok
+test_no_overwrite (test_inventory.InventoryTests.test_no_overwrite) ... ok
+test_output_under_root_rejected (test_inventory.InventoryTests.test_output_under_root_rejected) ... ok
+test_overlap_rejected (test_inventory.InventoryTests.test_overlap_rejected) ... ok
+test_symlink_skipped (test_inventory.InventoryTests.test_symlink_skipped) ... ok
+test_truncation (test_inventory.InventoryTests.test_truncation) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.005s
+
+OK

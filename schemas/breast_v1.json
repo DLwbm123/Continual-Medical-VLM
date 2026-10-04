@@ -1,0 +1,169 @@
+{
+  "version": "BrEaST-v1-engineering-1",
+  "groups": [
+    {
+      "id": "shape",
+      "field": "Shape",
+      "type": "categorical",
+      "values": [
+        "irregular",
+        "oval",
+        "round"
+      ],
+      "outputs": 3,
+      "candidate_texts": [
+        "The breast lesion has irregular shape.",
+        "The breast lesion has oval shape.",
+        "The breast lesion has round shape."
+      ],
+      "modality": "breast B-mode ultrasound",
+      "definition": "Source BI-RADS descriptor in Table 3; mass-oriented except calcifications and skin",
+      "source": "https://www.nature.com/articles/s41597-024-02984-z/tables/3",
+      "review_status": "Encoding checked against author table and released workbook; no new clinician adjudication"
+    },
+    {
+      "id": "margin",
+      "field": "Margin",
+      "type": "multilabel",
+      "values": [
+        "circumscribed",
+        "indistinct",
+        "angular",
+        "microlobulated",
+        "spiculated"
+      ],
+      "outputs": 5,
+      "candidate_texts": [
+        "The breast lesion has a circumscribed margin.",
+        "The breast lesion does not have a circumscribed margin.",
+        "The breast lesion has a indistinct margin.",
+        "The breast lesion does not have a indistinct margin.",
+        "The breast lesion has a angular margin.",
+        "The breast lesion does not have a angular margin.",
+        "The breast lesion has a microlobulated margin.",
+        "The breast lesion does not have a microlobulated margin.",
+        "The breast lesion has a spiculated margin.",
+        "The breast lesion does not have a spiculated margin."
+      ],
+      "modality": "breast B-mode ultrasound",
+      "definition": "Source BI-RADS descriptor in Table 3; mass-oriented except calcifications and skin",
+      "source": "https://www.nature.com/articles/s41597-024-02984-z/tables/3",
+      "review_status": "Encoding checked against author table and released workbook; no new clinician adjudication"
+    },
+    {
+      "id": "echogenicity",
+      "field": "Echogenicity",
+      "type": "categorical",
+      "values": [
+        "hypoechoic",
+        "heterogeneous",
+        "anechoic",
+        "isoechoic",
+        "complex cystic/solid",
+        "hyperechoic"
+      ],
+      "outputs": 6,
+      "candidate_texts": [
+        "The breast lesion is hypoechoic.",
+        "The breast lesion is heterogeneous.",
+        "The breast lesion is anechoic.",
+        "The breast lesion is isoechoic.",
+        "The breast lesion is complex cystic/solid.",
+        "The breast lesion is hyperechoic."
+      ],
+      "modality": "breast B-mode ultrasound",
+      "definition": "Source BI-RADS descriptor in Table 3; mass-oriented except calcifications and skin",
+      "source": "https://www.nature.com/articles/s41597-024-02984-z/tables/3",
+      "review_status": "Encoding checked against author table and released workbook; no new clinician adjudication"
+    },
+    {
+      "id": "posterior",
+      "field": "Posterior_features",
+      "type": "categorical",
+      "values": [
+        "no",
+        "shadowing",
+        "enhancement",
+        "combined"
+      ],
+      "outputs": 4,
+      "candidate_texts": [
+        "The breast lesion has no posterior acoustic features.",
+        "The breast lesion has shadowing posterior acoustic features.",
+        "The breast lesion has enhancement posterior acoustic features.",
+        "The breast lesion has combined posterior acoustic features."
+      ],
+      "modality": "breast B-mode ultrasound",
+      "definition": "Source BI-RADS descriptor in Table 3; mass-oriented except calcifications and skin",
+      "source": "https://www.nature.com/articles/s41597-024-02984-z/tables/3",
+      "review_status": "Encoding checked against author table and released workbook; no new clinician adjudication"
+    },
+    {
+      "id": "halo",
+      "field": "Halo",
+      "type": "binary",
+      "values": [
+        "yes"
+      ],
+      "outputs": 1,
+      "candidate_texts": [
+        "A hyperechoic halo is present around the breast lesion.",
+        "A hyperechoic halo is absent around the breast lesion."
+      ],
+      "modality": "breast B-mode ultrasound",
+      "definition": "Source BI-RADS descriptor in Table 3; mass-oriented except calcifications and skin",
+      "source": "https://www.nature.com/articles/s41597-024-02984-z/tables/3",
+      "review_status": "Encoding checked against author table and released workbook; no new clinician adjudication"
+    },
+    {
+      "id": "calcifications",
+      "field": "Calcifications",
+      "type": "categorical",
+      "values": [
+        "no",
+        "in a mass",
+        "intraductal"
+      ],
+      "outputs": 3,
+      "candidate_texts": [
+        "The breast ultrasound shows calcifications: no.",
+        "The breast ultrasound shows calcifications: in a mass.",
+        "The breast ultrasound shows calcifications: intraductal."
+      ],
+      "modality": "breast B-mode ultrasound",
+      "definition": "Source BI-RADS descriptor in Table 3; mass-oriented except calcifications and skin",
+      "source": "https://www.nature.com/articles/s41597-024-02984-z/tables/3",
+      "review_status": "Encoding checked against author table and released workbook; no new clinician adjudication"
+    },
+    {
+      "id": "skin",
+      "field": "Skin_thickening",
+      "type": "binary",
+      "values": [
+        "yes"
+      ],
+      "outputs": 1,
+      "candidate_texts": [
+        "Skin thickening is present on breast ultrasound.",
+        "Skin thickening is absent on breast ultrasound."
+      ],
+      "modality": "breast B-mode ultrasound",
+      "definition": "Source BI-RADS descriptor in Table 3; mass-oriented except calcifications and skin",
+      "source": "https://www.nature.com/articles/s41597-024-02984-z/tables/3",
+      "review_status": "Encoding checked against author table and released workbook; no new clinician adjudication"
+    }
+  ],
+  "missing_policy": "not applicable, not available, empty and indefinable are masked; no is explicit absence",
+  "multilabel_policy": "Complete source margin checkboxes; unselected entries in a valid row are negatives",
+  "excluded_fields": [
+    "BIRADS",
+    "Interpretation",
+    "Diagnosis",
+    "Verification",
+    "Age",
+    "Tissue_composition",
+    "Signs",
+    "Symptoms",
+    "Classification"
+  ]
+}

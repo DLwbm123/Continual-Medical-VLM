@@ -1,0 +1,72 @@
+{
+  "shape": {
+    "accuracy": 0.6326530612244898,
+    "patient_bootstrap95": [
+      0.4897959183673469,
+      0.7556122448979586
+    ],
+    "valid_patients": 49,
+    "bootstrap_replicates": 1000,
+    "interpretation": "Case resampling; multilabel attributes are kept together; no seed uncertainty"
+  },
+  "margin": {
+    "accuracy": 0.7918367346938775,
+    "patient_bootstrap95": [
+      0.734591836734694,
+      0.8448979591836734
+    ],
+    "valid_patients": 49,
+    "bootstrap_replicates": 1000,
+    "interpretation": "Case resampling; multilabel attributes are kept together; no seed uncertainty"
+  },
+  "echogenicity": {
+    "accuracy": 0.46938775510204084,
+    "patient_bootstrap95": [
+      0.32653061224489793,
+      0.6122448979591837
+    ],
+    "valid_patients": 49,
+    "bootstrap_replicates": 1000,
+    "interpretation": "Case resampling; multilabel attributes are kept together; no seed uncertainty"
+  },
+  "posterior": {
+    "accuracy": 0.7959183673469388,
+    "patient_bootstrap95": [
+      0.673469387755102,
+      0.8979591836734694
+    ],
+    "valid_patients": 49,
+    "bootstrap_replicates": 1000,
+    "interpretation": "Case resampling; multilabel attributes are kept together; no seed uncertainty"
+  },
+  "halo": {
+    "accuracy": 0.7551020408163265,
+    "patient_bootstrap95": [
+      0.6326530612244898,
+      0.8775510204081632
+    ],
+    "valid_patients": 49,
+    "bootstrap_replicates": 1000,
+    "interpretation": "Case resampling; multilabel attributes are kept together; no seed uncertainty"
+  },
+  "calcifications": {
+    "accuracy": 0.9387755102040817,
+    "patient_bootstrap95": [
+      0.8571428571428571,
+      1.0
+    ],
+    "valid_patients": 49,
+    "bootstrap_replicates": 1000,
+    "interpretation": "Case resampling; multilabel attributes are kept together; no seed uncertainty"
+  },
+  "skin": {
+    "accuracy": 0.9591836734693877,
+    "patient_bootstrap95": [
+      0.8979591836734694,
+      1.0
+    ],
+    "valid_patients": 49,
+    "bootstrap_replicates": 1000,
+    "interpretation": "Case resampling; multilabel attributes are kept together; no seed uncertainty"
+  }
+}

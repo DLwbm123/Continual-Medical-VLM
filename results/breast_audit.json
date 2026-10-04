@@ -1,0 +1,385 @@
+{
+  "source": "https://doi.org/10.7937/9WKK-Q141",
+  "version": "TCIA v1, 2024-01-08; files dated 2023-12-15",
+  "license": "CC BY 4.0",
+  "n_cases": 256,
+  "n_images": 256,
+  "n_masks": 266,
+  "excluded_normal": 4,
+  "group_disjoint": true,
+  "group_basis": "Source publication: one image per patient; case ID, not a recovered clinical ID",
+  "split_seed": 0,
+  "split_rule": "Per diagnosis shuffle, floor(60%) train, floor(20%) validation, remainder test",
+  "concepts": {
+    "train": {
+      "shape": {
+        "valid_cases": 150,
+        "status": {
+          "annotated": 150
+        },
+        "positive_counts": [
+          85,
+          56,
+          9
+        ],
+        "negative_counts": [
+          65,
+          94,
+          141
+        ]
+      },
+      "margin": {
+        "valid_cases": 150,
+        "status": {
+          "annotated": 150
+        },
+        "positive_counts": [
+          65,
+          70,
+          25,
+          21,
+          20
+        ],
+        "negative_counts": [
+          85,
+          80,
+          125,
+          129,
+          130
+        ]
+      },
+      "echogenicity": {
+        "valid_cases": 150,
+        "status": {
+          "annotated": 150
+        },
+        "positive_counts": [
+          98,
+          26,
+          10,
+          5,
+          6,
+          5
+        ],
+        "negative_counts": [
+          52,
+          124,
+          140,
+          145,
+          144,
+          145
+        ]
+      },
+      "posterior": {
+        "valid_cases": 150,
+        "status": {
+          "annotated": 150
+        },
+        "positive_counts": [
+          98,
+          26,
+          21,
+          5
+        ],
+        "negative_counts": [
+          52,
+          124,
+          129,
+          145
+        ]
+      },
+      "halo": {
+        "valid_cases": 150,
+        "status": {
+          "annotated": 150
+        },
+        "positive_counts": [
+          28
+        ],
+        "negative_counts": [
+          122
+        ]
+      },
+      "calcifications": {
+        "valid_cases": 149,
+        "status": {
+          "annotated": 149,
+          "not_assessable": 1
+        },
+        "positive_counts": [
+          137,
+          11,
+          1
+        ],
+        "negative_counts": [
+          12,
+          138,
+          148
+        ]
+      },
+      "skin": {
+        "valid_cases": 150,
+        "status": {
+          "annotated": 150
+        },
+        "positive_counts": [
+          9
+        ],
+        "negative_counts": [
+          141
+        ]
+      }
+    },
+    "val": {
+      "shape": {
+        "valid_cases": 49,
+        "status": {
+          "annotated": 49
+        },
+        "positive_counts": [
+          26,
+          22,
+          1
+        ],
+        "negative_counts": [
+          23,
+          27,
+          48
+        ]
+      },
+      "margin": {
+        "valid_cases": 49,
+        "status": {
+          "annotated": 49
+        },
+        "positive_counts": [
+          27,
+          17,
+          5,
+          9,
+          5
+        ],
+        "negative_counts": [
+          22,
+          32,
+          44,
+          40,
+          44
+        ]
+      },
+      "echogenicity": {
+        "valid_cases": 49,
+        "status": {
+          "annotated": 49
+        },
+        "positive_counts": [
+          24,
+          14,
+          1,
+          4,
+          3,
+          3
+        ],
+        "negative_counts": [
+          25,
+          35,
+          48,
+          45,
+          46,
+          46
+        ]
+      },
+      "posterior": {
+        "valid_cases": 49,
+        "status": {
+          "annotated": 49
+        },
+        "positive_counts": [
+          34,
+          8,
+          6,
+          1
+        ],
+        "negative_counts": [
+          15,
+          41,
+          43,
+          48
+        ]
+      },
+      "halo": {
+        "valid_cases": 49,
+        "status": {
+          "annotated": 49
+        },
+        "positive_counts": [
+          16
+        ],
+        "negative_counts": [
+          33
+        ]
+      },
+      "calcifications": {
+        "valid_cases": 49,
+        "status": {
+          "annotated": 49
+        },
+        "positive_counts": [
+          46,
+          3,
+          0
+        ],
+        "negative_counts": [
+          3,
+          46,
+          49
+        ]
+      },
+      "skin": {
+        "valid_cases": 49,
+        "status": {
+          "annotated": 49
+        },
+        "positive_counts": [
+          2
+        ],
+        "negative_counts": [
+          47
+        ]
+      }
+    },
+    "test": {
+      "shape": {
+        "valid_cases": 53,
+        "status": {
+          "annotated": 53
+        },
+        "positive_counts": [
+          29,
+          19,
+          5
+        ],
+        "negative_counts": [
+          24,
+          34,
+          48
+        ]
+      },
+      "margin": {
+        "valid_cases": 53,
+        "status": {
+          "annotated": 53
+        },
+        "positive_counts": [
+          23,
+          28,
+          12,
+          6,
+          8
+        ],
+        "negative_counts": [
+          30,
+          25,
+          41,
+          47,
+          45
+        ]
+      },
+      "echogenicity": {
+        "valid_cases": 53,
+        "status": {
+          "annotated": 53
+        },
+        "positive_counts": [
+          26,
+          17,
+          4,
+          3,
+          2,
+          1
+        ],
+        "negative_counts": [
+          27,
+          36,
+          49,
+          50,
+          51,
+          52
+        ]
+      },
+      "posterior": {
+        "valid_cases": 53,
+        "status": {
+          "annotated": 53
+        },
+        "positive_counts": [
+          27,
+          16,
+          9,
+          1
+        ],
+        "negative_counts": [
+          26,
+          37,
+          44,
+          52
+        ]
+      },
+      "halo": {
+        "valid_cases": 53,
+        "status": {
+          "annotated": 53
+        },
+        "positive_counts": [
+          11
+        ],
+        "negative_counts": [
+          42
+        ]
+      },
+      "calcifications": {
+        "valid_cases": 52,
+        "status": {
+          "annotated": 52,
+          "not_assessable": 1
+        },
+        "positive_counts": [
+          42,
+          9,
+          1
+        ],
+        "negative_counts": [
+          10,
+          43,
+          51
+        ]
+      },
+      "skin": {
+        "valid_cases": 53,
+        "status": {
+          "annotated": 53
+        },
+        "positive_counts": [
+          4
+        ],
+        "negative_counts": [
+          49
+        ]
+      }
+    }
+  },
+  "splits": {
+    "train": {
+      "benign": 92,
+      "malignant": 58
+    },
+    "val": {
+      "benign": 30,
+      "malignant": 19
+    },
+    "test": {
+      "benign": 32,
+      "malignant": 21
+    }
+  }
+}

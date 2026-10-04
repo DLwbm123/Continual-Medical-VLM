@@ -1,0 +1,36 @@
+{
+  "example_only": true,
+  "clinical_approval": false,
+  "warning": "Artificial schema example, not real annotation or approved medical vocabulary. Values require dataset-specific review.",
+  "sample": {
+    "sample_id": "EXAMPLE_ONLY_001",
+    "task_id": "TO_BE_VERIFIED",
+    "image_path": null,
+    "patient_id": null,
+    "split": null,
+    "diagnosis_label": null,
+    "concept_annotations": [
+      {
+        "concept_id": "ultrasound.breast.shape",
+        "definition_version": null,
+        "target_type": "categorical",
+        "allowed_values": null,
+        "value": null,
+        "applicability": "unknown",
+        "observability": "unknown",
+        "annotation_status": "not_annotated",
+        "source": null,
+        "reviewed": false,
+        "region_annotation": null,
+        "use_for_supervised_loss": false,
+        "use_as_primary_evaluation_truth": false
+      }
+    ]
+  },
+  "enums": {
+    "applicability": ["applicable", "not_applicable", "unknown"],
+    "observability": ["assessable", "not_assessable", "unknown"],
+    "annotation_status": ["observed", "not_annotated", "ambiguous", "pseudo_label"],
+    "target_type": ["binary", "categorical", "multilabel"]
+  }
+}

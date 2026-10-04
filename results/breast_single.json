@@ -1,0 +1,3285 @@
+{
+  "protocol": "single-task concept feasibility",
+  "runtime": {
+    "feature_dimension": 512,
+    "context_length": 256,
+    "preprocess": "Full-frame aspect-preserving letterbox to 224, then checkpoint evaluation transform; no random augmentation",
+    "text_prompts": [
+      "a breast ultrasound image showing benign.",
+      "a breast ultrasound image showing malignant."
+    ],
+    "trainable_parameters": 86204697,
+    "frozen_text_parameters": 109710848,
+    "concept_heads": 7,
+    "concept_truth": "BrEaST source radiologist labels",
+    "test_evaluated": false,
+    "gpu": "NVIDIA RTX PRO 5000 72GB Blackwell"
+  },
+  "evaluations": {
+    "200": {
+      "diagnosis": {
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.7035087719298245,
+        "macro_f1": 0.7117647058823529,
+        "macro_ovr_auc": 0.7859649122807018,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.7859649122807018,
+          "1": 0.7859649122807018
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "vision_language": {
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.7035087719298245,
+        "macro_f1": 0.7117647058823529,
+        "macro_ovr_auc": 0.8105263157894737,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.8105263157894737,
+          "1": 0.8105263157894737
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "diagnosis_accuracy_wilson95": [
+        0.6191368101239646,
+        0.8539765474166002
+      ],
+      "concept": {
+        "shape": {
+          "accuracy": 0.673469387755102,
+          "balanced_accuracy": 0.44871794871794873,
+          "macro_f1": 0.44264264264264264,
+          "macro_ovr_auc": 0.6334280654932828,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.714046822742475,
+            "1": 0.7070707070707071,
+            "2": 0.47916666666666663
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.7346938775510204,
+              "f1": 0.7111111111111111,
+              "auc": 0.8164983164983165,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.7142857142857143,
+              "f1": 0.5882352941176471,
+              "auc": 0.7334558823529411,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.8979591836734694,
+              "f1": 0.2857142857142857,
+              "auc": 0.8477272727272727,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.7959183673469388,
+              "f1": 0.0,
+              "auc": 0.5083333333333333,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.7272727272727273,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.8122448979591836,
+          "macro_f1": 0.38367880485527545,
+          "macro_ovr_auc": 0.7266575064369182
+        },
+        "echogenicity": {
+          "accuracy": 0.4489795918367347,
+          "balanced_accuracy": 0.15773809523809523,
+          "macro_f1": 0.12299613045881704,
+          "macro_ovr_auc": 0.6770091031581714,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7066666666666666,
+            "1": 0.5877551020408163,
+            "2": 0.41666666666666663,
+            "3": 0.8944444444444444,
+            "4": 0.536231884057971,
+            "5": 0.9202898550724639
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7755102040816326,
+          "balanced_accuracy": 0.4093137254901961,
+          "macro_f1": 0.44345238095238093,
+          "macro_ovr_auc": 0.8139748979569138,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7431372549019608,
+            "1": 0.774390243902439,
+            "2": 0.821705426356589,
+            "3": 0.9166666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.7551020408163265,
+              "f1": 0.4,
+              "auc": 0.8106060606060607,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7551020408163265,
+          "macro_f1": 0.4,
+          "macro_ovr_auc": 0.8106060606060607
+        },
+        "calcifications": {
+          "accuracy": 0.9387755102040817,
+          "balanced_accuracy": 0.5,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.6811594202898551,
+            "1": 0.6521739130434783,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.824468085106383,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.824468085106383
+        }
+      },
+      "concept_vision_language": {
+        "shape": {
+          "accuracy": 0.6326530612244898,
+          "balanced_accuracy": 0.4277389277389278,
+          "macro_f1": 0.4233847913093196,
+          "macro_ovr_auc": 0.7802659632369778,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7040133779264215,
+            "1": 0.6784511784511785,
+            "2": 0.9583333333333334
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.5918367346938775,
+              "f1": 0.47368421052631576,
+              "auc": 0.6986531986531986,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.7346938775510204,
+              "f1": 0.5185185185185185,
+              "auc": 0.7931985294117647,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.5,
+              "auc": 0.7068181818181818,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.8163265306122449,
+              "f1": 0.0,
+              "auc": 0.7861111111111111,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.7136363636363636,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7959183673469388,
+          "macro_f1": 0.3651072124756335,
+          "macro_ovr_auc": 0.739683476926124
+        },
+        "echogenicity": {
+          "accuracy": 0.4489795918367347,
+          "balanced_accuracy": 0.15277777777777776,
+          "macro_f1": 0.11282051282051282,
+          "macro_ovr_auc": 0.700179064379375,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.5950000000000001,
+            "1": 0.5040816326530612,
+            "2": 0.6041666666666667,
+            "3": 0.8166666666666667,
+            "4": 0.8695652173913043,
+            "5": 0.8115942028985508
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7755102040816326,
+          "balanced_accuracy": 0.3854166666666667,
+          "macro_f1": 0.4229820812099293,
+          "macro_ovr_auc": 0.7785229193776205,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7529411764705882,
+            "1": 0.7439024390243902,
+            "2": 0.8255813953488372,
+            "3": 0.7916666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.673469387755102,
+              "f1": 0.1111111111111111,
+              "auc": 0.7670454545454545,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.673469387755102,
+          "macro_f1": 0.1111111111111111,
+          "macro_ovr_auc": 0.7670454545454545
+        },
+        "calcifications": {
+          "accuracy": 0.9183673469387755,
+          "balanced_accuracy": 0.4891304347826087,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.8768115942028986,
+            "1": 0.8985507246376812,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.648936170212766,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.648936170212766
+        }
+      },
+      "concept_unavailable_reason": null
+    },
+    "400": {
+      "diagnosis": {
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.7035087719298245,
+        "macro_f1": 0.7117647058823529,
+        "macro_ovr_auc": 0.7771929824561403,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.7771929824561403,
+          "1": 0.7771929824561403
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "vision_language": {
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.7035087719298245,
+        "macro_f1": 0.7117647058823529,
+        "macro_ovr_auc": 0.8087719298245615,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.8087719298245614,
+          "1": 0.8087719298245615
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "diagnosis_accuracy_wilson95": [
+        0.6191368101239646,
+        0.8539765474166002
+      ],
+      "concept": {
+        "shape": {
+          "accuracy": 0.6530612244897959,
+          "balanced_accuracy": 0.43356643356643354,
+          "macro_f1": 0.4256223436551306,
+          "macro_ovr_auc": 0.5936741063552659,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.705685618729097,
+            "1": 0.7003367003367004,
+            "2": 0.375
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.6938775510204082,
+              "f1": 0.6511627906976745,
+              "auc": 0.8013468013468013,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.673469387755102,
+              "f1": 0.5555555555555556,
+              "auc": 0.7261029411764706,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.8979591836734694,
+              "f1": 0.2857142857142857,
+              "auc": 0.8363636363636363,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.7755102040816326,
+              "f1": 0.0,
+              "auc": 0.5444444444444445,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.7136363636363636,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7918367346938775,
+          "macro_f1": 0.3651531930601698,
+          "macro_ovr_auc": 0.7243788373935433
+        },
+        "echogenicity": {
+          "accuracy": 0.46938775510204084,
+          "balanced_accuracy": 0.16468253968253968,
+          "macro_f1": 0.12636165577342048,
+          "macro_ovr_auc": 0.6644408294718854,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.6966666666666667,
+            "1": 0.5795918367346938,
+            "2": 0.33333333333333337,
+            "3": 0.9277777777777777,
+            "4": 0.5507246376811594,
+            "5": 0.8985507246376812
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7959183673469388,
+          "balanced_accuracy": 0.4166666666666667,
+          "macro_f1": 0.456043956043956,
+          "macro_ovr_auc": 0.7965720335212928,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7098039215686275,
+            "1": 0.7652439024390244,
+            "2": 0.7945736434108527,
+            "3": 0.9166666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.7551020408163265,
+              "f1": 0.4,
+              "auc": 0.8011363636363636,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7551020408163265,
+          "macro_f1": 0.4,
+          "macro_ovr_auc": 0.8011363636363636
+        },
+        "calcifications": {
+          "accuracy": 0.9387755102040817,
+          "balanced_accuracy": 0.5,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.7391304347826086,
+            "1": 0.7028985507246377,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.7872340425531915,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.7872340425531915
+        }
+      },
+      "concept_vision_language": {
+        "shape": {
+          "accuracy": 0.6530612244897959,
+          "balanced_accuracy": 0.4405594405594406,
+          "macro_f1": 0.4366522366522367,
+          "macro_ovr_auc": 0.7483420699000409,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7073578595317727,
+            "1": 0.6835016835016835,
+            "2": 0.8541666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.5918367346938775,
+              "f1": 0.47368421052631576,
+              "auc": 0.6818181818181819,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.7346938775510204,
+              "f1": 0.5517241379310345,
+              "auc": 0.7977941176470589,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.5,
+              "auc": 0.7545454545454546,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.8163265306122449,
+              "f1": 0.0,
+              "auc": 0.7999999999999999,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.6704545454545454,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7959183673469388,
+          "macro_f1": 0.3717483363581367,
+          "macro_ovr_auc": 0.7409224598930482
+        },
+        "echogenicity": {
+          "accuracy": 0.42857142857142855,
+          "balanced_accuracy": 0.14583333333333334,
+          "macro_f1": 0.1076923076923077,
+          "macro_ovr_auc": 0.6868997502382596,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.5983333333333334,
+            "1": 0.5204081632653061,
+            "2": 0.5833333333333333,
+            "3": 0.7888888888888889,
+            "4": 0.898550724637681,
+            "5": 0.7318840579710145
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7755102040816326,
+          "balanced_accuracy": 0.3854166666666667,
+          "macro_f1": 0.4229820812099293,
+          "macro_ovr_auc": 0.7602698580850378,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7137254901960784,
+            "1": 0.725609756097561,
+            "2": 0.810077519379845,
+            "3": 0.7916666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.673469387755102,
+              "f1": 0.1111111111111111,
+              "auc": 0.7528409090909091,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.673469387755102,
+          "macro_f1": 0.1111111111111111,
+          "macro_ovr_auc": 0.7528409090909091
+        },
+        "calcifications": {
+          "accuracy": 0.9183673469387755,
+          "balanced_accuracy": 0.4891304347826087,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.8840579710144928,
+            "1": 0.9057971014492754,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.6542553191489362,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.6542553191489362
+        }
+      },
+      "concept_unavailable_reason": null
+    },
+    "600": {
+      "diagnosis": {
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.7035087719298245,
+        "macro_f1": 0.7117647058823529,
+        "macro_ovr_auc": 0.7719298245614035,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.7719298245614036,
+          "1": 0.7719298245614035
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "vision_language": {
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.7035087719298245,
+        "macro_f1": 0.7117647058823529,
+        "macro_ovr_auc": 0.8087719298245615,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.8087719298245615,
+          "1": 0.8087719298245614
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "diagnosis_accuracy_wilson95": [
+        0.6191368101239646,
+        0.8539765474166002
+      ],
+      "concept": {
+        "shape": {
+          "accuracy": 0.6530612244897959,
+          "balanced_accuracy": 0.4358974358974359,
+          "macro_f1": 0.4302705917335712,
+          "macro_ovr_auc": 0.5947851799301075,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7107023411371238,
+            "1": 0.6986531986531987,
+            "2": 0.375
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.7346938775510204,
+              "f1": 0.7111111111111111,
+              "auc": 0.7912457912457913,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.673469387755102,
+              "f1": 0.5294117647058824,
+              "auc": 0.7169117647058822,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.8979591836734694,
+              "f1": 0.2857142857142857,
+              "auc": 0.8409090909090909,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.7755102040816326,
+              "f1": 0.0,
+              "auc": 0.5736111111111112,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.7113636363636364,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.8,
+          "macro_f1": 0.3719140989729225,
+          "macro_ovr_auc": 0.7268082788671024
+        },
+        "echogenicity": {
+          "accuracy": 0.4489795918367347,
+          "balanced_accuracy": 0.15773809523809523,
+          "macro_f1": 0.12360446570972887,
+          "macro_ovr_auc": 0.6623697788294061,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.6833333333333333,
+            "1": 0.5693877551020408,
+            "2": 0.33333333333333337,
+            "3": 0.9388888888888889,
+            "4": 0.572463768115942,
+            "5": 0.8768115942028984
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7959183673469388,
+          "balanced_accuracy": 0.4166666666666667,
+          "macro_f1": 0.456043956043956,
+          "macro_ovr_auc": 0.792347255124398,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.711764705882353,
+            "1": 0.7347560975609756,
+            "2": 0.8062015503875969,
+            "3": 0.9166666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.7755102040816326,
+              "f1": 0.47619047619047616,
+              "auc": 0.8115530303030303,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7755102040816326,
+          "macro_f1": 0.47619047619047616,
+          "macro_ovr_auc": 0.8115530303030303
+        },
+        "calcifications": {
+          "accuracy": 0.9387755102040817,
+          "balanced_accuracy": 0.5,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.7971014492753623,
+            "1": 0.7608695652173914,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.8085106382978723,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.8085106382978723
+        }
+      },
+      "concept_vision_language": {
+        "shape": {
+          "accuracy": 0.673469387755102,
+          "balanced_accuracy": 0.4557109557109557,
+          "macro_f1": 0.4516221648004594,
+          "macro_ovr_auc": 0.73421646791212,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7190635451505016,
+            "1": 0.6919191919191918,
+            "2": 0.7916666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.5918367346938775,
+              "f1": 0.47368421052631576,
+              "auc": 0.6784511784511784,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.7346938775510204,
+              "f1": 0.5806451612903226,
+              "auc": 0.7931985294117647,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.5,
+              "auc": 0.7681818181818182,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.8163265306122449,
+              "f1": 0.0,
+              "auc": 0.8097222222222223,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.7318181818181818,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7959183673469388,
+          "macro_f1": 0.37753254102999434,
+          "macro_ovr_auc": 0.7562743860170331
+        },
+        "echogenicity": {
+          "accuracy": 0.42857142857142855,
+          "balanced_accuracy": 0.14583333333333334,
+          "macro_f1": 0.1076923076923077,
+          "macro_ovr_auc": 0.6891233691544251,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.6066666666666667,
+            "1": 0.5510204081632653,
+            "2": 0.5833333333333333,
+            "3": 0.7777777777777778,
+            "4": 0.8985507246376812,
+            "5": 0.717391304347826
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7755102040816326,
+          "balanced_accuracy": 0.3854166666666667,
+          "macro_f1": 0.4229820812099293,
+          "macro_ovr_auc": 0.7711765122952187,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7176470588235294,
+            "1": 0.7042682926829268,
+            "2": 0.8294573643410852,
+            "3": 0.8333333333333334
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.673469387755102,
+              "f1": 0.1111111111111111,
+              "auc": 0.7585227272727274,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.673469387755102,
+          "macro_f1": 0.1111111111111111,
+          "macro_ovr_auc": 0.7585227272727274
+        },
+        "calcifications": {
+          "accuracy": 0.9387755102040817,
+          "balanced_accuracy": 0.5,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.8695652173913044,
+            "1": 0.8985507246376812,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.6063829787234043,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.6063829787234043
+        }
+      },
+      "concept_unavailable_reason": null
+    },
+    "800": {
+      "diagnosis": {
+        "accuracy": 0.7755102040816326,
+        "balanced_accuracy": 0.7298245614035088,
+        "macro_f1": 0.7404910929224844,
+        "macro_ovr_auc": 0.7807017543859649,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.780701754385965,
+          "1": 0.7807017543859649
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "vision_language": {
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.7035087719298245,
+        "macro_f1": 0.7117647058823529,
+        "macro_ovr_auc": 0.8122807017543859,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.8122807017543859,
+          "1": 0.8122807017543859
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "diagnosis_accuracy_wilson95": [
+        0.641212127640404,
+        0.8697502985034061
+      ],
+      "concept": {
+        "shape": {
+          "accuracy": 0.6530612244897959,
+          "balanced_accuracy": 0.4358974358974359,
+          "macro_f1": 0.4302705917335712,
+          "macro_ovr_auc": 0.6189780093765601,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7140468227424749,
+            "1": 0.7053872053872055,
+            "2": 0.4375
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.7142857142857143,
+              "f1": 0.6818181818181818,
+              "auc": 0.7929292929292929,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.6326530612244898,
+              "f1": 0.5,
+              "auc": 0.7279411764705882,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.8979591836734694,
+              "f1": 0.2857142857142857,
+              "auc": 0.85,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.7959183673469388,
+              "f1": 0.0,
+              "auc": 0.6055555555555556,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.7295454545454546,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7918367346938775,
+          "macro_f1": 0.3601731601731601,
+          "macro_ovr_auc": 0.7411942959001783
+        },
+        "echogenicity": {
+          "accuracy": 0.46938775510204084,
+          "balanced_accuracy": 0.16468253968253968,
+          "macro_f1": 0.12699659596753077,
+          "macro_ovr_auc": 0.6453246081041112,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.6716666666666666,
+            "1": 0.573469387755102,
+            "2": 0.33333333333333337,
+            "3": 0.9166666666666667,
+            "4": 0.5144927536231884,
+            "5": 0.8623188405797102
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7959183673469388,
+          "balanced_accuracy": 0.4166666666666667,
+          "macro_f1": 0.456043956043956,
+          "macro_ovr_auc": 0.7878775872232047,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7107843137254902,
+            "1": 0.7256097560975611,
+            "2": 0.7984496124031008,
+            "3": 0.9166666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.7551020408163265,
+              "f1": 0.45454545454545453,
+              "auc": 0.8049242424242424,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7551020408163265,
+          "macro_f1": 0.45454545454545453,
+          "macro_ovr_auc": 0.8049242424242424
+        },
+        "calcifications": {
+          "accuracy": 0.9387755102040817,
+          "balanced_accuracy": 0.5,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.7898550724637681,
+            "1": 0.7681159420289856,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.7978723404255319,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.7978723404255319
+        }
+      },
+      "concept_vision_language": {
+        "shape": {
+          "accuracy": 0.673469387755102,
+          "balanced_accuracy": 0.4557109557109557,
+          "macro_f1": 0.4516221648004594,
+          "macro_ovr_auc": 0.735102089268756,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7307692307692308,
+            "1": 0.7037037037037037,
+            "2": 0.7708333333333334
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.5918367346938775,
+              "f1": 0.5,
+              "auc": 0.6835016835016836,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.7346938775510204,
+              "f1": 0.5806451612903226,
+              "auc": 0.7977941176470589,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.5,
+              "auc": 0.7772727272727273,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.8163265306122449,
+              "f1": 0.0,
+              "auc": 0.7986111111111113,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.7568181818181818,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7959183673469388,
+          "macro_f1": 0.38279569892473114,
+          "macro_ovr_auc": 0.7627995642701525
+        },
+        "echogenicity": {
+          "accuracy": 0.42857142857142855,
+          "balanced_accuracy": 0.14583333333333334,
+          "macro_f1": 0.1076923076923077,
+          "macro_ovr_auc": 0.680757624305761,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.6033333333333334,
+            "1": 0.5612244897959184,
+            "2": 0.5625,
+            "3": 0.7777777777777778,
+            "4": 0.8840579710144927,
+            "5": 0.6956521739130435
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7755102040816326,
+          "balanced_accuracy": 0.3854166666666667,
+          "macro_f1": 0.4229820812099293,
+          "macro_ovr_auc": 0.7784496541100842,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7196078431372549,
+            "1": 0.7042682926829268,
+            "2": 0.8565891472868217,
+            "3": 0.8333333333333334
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.673469387755102,
+              "f1": 0.1111111111111111,
+              "auc": 0.759469696969697,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.673469387755102,
+          "macro_f1": 0.1111111111111111,
+          "macro_ovr_auc": 0.759469696969697
+        },
+        "calcifications": {
+          "accuracy": 0.9387755102040817,
+          "balanced_accuracy": 0.5,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.8840579710144928,
+            "1": 0.9130434782608696,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.5957446808510638,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.5957446808510638
+        }
+      },
+      "concept_unavailable_reason": null
+    },
+    "1000": {
+      "diagnosis": {
+        "accuracy": 0.7755102040816326,
+        "balanced_accuracy": 0.7298245614035088,
+        "macro_f1": 0.7404910929224844,
+        "macro_ovr_auc": 0.7789473684210526,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.7789473684210527,
+          "1": 0.7789473684210526
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "vision_language": {
+        "accuracy": 0.7551020408163265,
+        "balanced_accuracy": 0.7035087719298245,
+        "macro_f1": 0.7117647058823529,
+        "macro_ovr_auc": 0.8052631578947368,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.8052631578947368,
+          "1": 0.8052631578947368
+        },
+        "support": {
+          "0": {
+            "positive": 30,
+            "negative": 19
+          },
+          "1": {
+            "positive": 19,
+            "negative": 30
+          }
+        },
+        "n": 49
+      },
+      "diagnosis_accuracy_wilson95": [
+        0.641212127640404,
+        0.8697502985034061
+      ],
+      "concept": {
+        "shape": {
+          "accuracy": 0.6326530612244898,
+          "balanced_accuracy": 0.42074592074592077,
+          "macro_f1": 0.4135135135135135,
+          "macro_ovr_auc": 0.6050891204876713,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7140468227424749,
+            "1": 0.7053872053872055,
+            "2": 0.39583333333333337
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.6938775510204082,
+              "f1": 0.6511627906976745,
+              "auc": 0.7861952861952862,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.6326530612244898,
+              "f1": 0.5,
+              "auc": 0.7224264705882354,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.5,
+              "auc": 0.859090909090909,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.7959183673469388,
+              "f1": 0.0,
+              "auc": 0.6111111111111112,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.740909090909091,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7918367346938775,
+          "macro_f1": 0.39689922480620154,
+          "macro_ovr_auc": 0.7439465735789266
+        },
+        "echogenicity": {
+          "accuracy": 0.46938775510204084,
+          "balanced_accuracy": 0.16468253968253968,
+          "macro_f1": 0.12699659596753077,
+          "macro_ovr_auc": 0.6514459068651615,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.6649999999999999,
+            "1": 0.5673469387755101,
+            "2": 0.33333333333333337,
+            "3": 0.9444444444444444,
+            "4": 0.536231884057971,
+            "5": 0.8623188405797102
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7959183673469388,
+          "balanced_accuracy": 0.4166666666666667,
+          "macro_f1": 0.456043956043956,
+          "macro_ovr_auc": 0.7973568199259283,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7196078431372549,
+            "1": 0.7469512195121951,
+            "2": 0.8062015503875969,
+            "3": 0.9166666666666666
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.7551020408163265,
+              "f1": 0.45454545454545453,
+              "auc": 0.8087121212121211,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.7551020408163265,
+          "macro_f1": 0.45454545454545453,
+          "macro_ovr_auc": 0.8087121212121211
+        },
+        "calcifications": {
+          "accuracy": 0.9387755102040817,
+          "balanced_accuracy": 0.5,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.818840579710145,
+            "1": 0.7971014492753623,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.7819148936170213,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.7819148936170213
+        }
+      },
+      "concept_vision_language": {
+        "shape": {
+          "accuracy": 0.673469387755102,
+          "balanced_accuracy": 0.4557109557109557,
+          "macro_f1": 0.4516221648004594,
+          "macro_ovr_auc": 0.7345521829217482,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.725752508361204,
+            "1": 0.707070707070707,
+            "2": 0.7708333333333334
+          },
+          "support": {
+            "0": {
+              "positive": 26,
+              "negative": 23
+            },
+            "1": {
+              "positive": 22,
+              "negative": 27
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "irregular",
+            "oval",
+            "round"
+          ],
+          "majority_accuracy": 0.5306122448979592
+        },
+        "margin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "circumscribed",
+              "positive": 27,
+              "negative": 22,
+              "accuracy": 0.6122448979591837,
+              "f1": 0.5365853658536586,
+              "auc": 0.6784511784511784,
+              "undefined_reason": null
+            },
+            {
+              "value": "indistinct",
+              "positive": 17,
+              "negative": 32,
+              "accuracy": 0.7551020408163265,
+              "f1": 0.625,
+              "auc": 0.7931985294117647,
+              "undefined_reason": null
+            },
+            {
+              "value": "angular",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.5,
+              "auc": 0.7863636363636364,
+              "undefined_reason": null
+            },
+            {
+              "value": "microlobulated",
+              "positive": 9,
+              "negative": 40,
+              "accuracy": 0.8163265306122449,
+              "f1": 0.0,
+              "auc": 0.801388888888889,
+              "undefined_reason": null
+            },
+            {
+              "value": "spiculated",
+              "positive": 5,
+              "negative": 44,
+              "accuracy": 0.9183673469387755,
+              "f1": 0.3333333333333333,
+              "auc": 0.7681818181818182,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.8040816326530612,
+          "macro_f1": 0.3989837398373984,
+          "macro_ovr_auc": 0.7655168102594574
+        },
+        "echogenicity": {
+          "accuracy": 0.42857142857142855,
+          "balanced_accuracy": 0.14583333333333334,
+          "macro_f1": 0.1076923076923077,
+          "macro_ovr_auc": 0.6802585116172072,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.6116666666666667,
+            "1": 0.5571428571428572,
+            "2": 0.5625,
+            "3": 0.7777777777777777,
+            "4": 0.8840579710144927,
+            "5": 0.6884057971014492
+          },
+          "support": {
+            "0": {
+              "positive": 24,
+              "negative": 25
+            },
+            "1": {
+              "positive": 14,
+              "negative": 35
+            },
+            "2": {
+              "positive": 1,
+              "negative": 48
+            },
+            "3": {
+              "positive": 4,
+              "negative": 45
+            },
+            "4": {
+              "positive": 3,
+              "negative": 46
+            },
+            "5": {
+              "positive": 3,
+              "negative": 46
+            }
+          },
+          "n": 49,
+          "values": [
+            "hypoechoic",
+            "heterogeneous",
+            "anechoic",
+            "isoechoic",
+            "complex cystic/solid",
+            "hyperechoic"
+          ],
+          "majority_accuracy": 0.4897959183673469
+        },
+        "posterior": {
+          "accuracy": 0.7755102040816326,
+          "balanced_accuracy": 0.3854166666666667,
+          "macro_f1": 0.4229820812099293,
+          "macro_ovr_auc": 0.7813680307630709,
+          "auc_undefined_reason": null,
+          "per_class_auc": {
+            "0": 0.7235294117647059,
+            "1": 0.7042682926829268,
+            "2": 0.8643410852713178,
+            "3": 0.8333333333333334
+          },
+          "support": {
+            "0": {
+              "positive": 34,
+              "negative": 15
+            },
+            "1": {
+              "positive": 8,
+              "negative": 41
+            },
+            "2": {
+              "positive": 6,
+              "negative": 43
+            },
+            "3": {
+              "positive": 1,
+              "negative": 48
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "shadowing",
+            "enhancement",
+            "combined"
+          ],
+          "majority_accuracy": 0.6938775510204082
+        },
+        "halo": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 16,
+              "negative": 33,
+              "accuracy": 0.6938775510204082,
+              "f1": 0.11764705882352941,
+              "auc": 0.7585227272727273,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.6938775510204082,
+          "macro_f1": 0.11764705882352941,
+          "macro_ovr_auc": 0.7585227272727273
+        },
+        "calcifications": {
+          "accuracy": 0.9387755102040817,
+          "balanced_accuracy": 0.5,
+          "macro_f1": null,
+          "macro_ovr_auc": null,
+          "auc_undefined_reason": "At least one class lacks positives or negatives",
+          "per_class_auc": {
+            "0": 0.891304347826087,
+            "1": 0.9130434782608696,
+            "2": null
+          },
+          "support": {
+            "0": {
+              "positive": 46,
+              "negative": 3
+            },
+            "1": {
+              "positive": 3,
+              "negative": 46
+            },
+            "2": {
+              "positive": 0,
+              "negative": 49
+            }
+          },
+          "n": 49,
+          "values": [
+            "no",
+            "in a mass",
+            "intraductal"
+          ],
+          "majority_accuracy": 0.9387755102040817,
+          "f1_undefined_reason": "At least one declared category has no true examples"
+        },
+        "skin": {
+          "n": 49,
+          "attributes": [
+            {
+              "value": "yes",
+              "positive": 2,
+              "negative": 47,
+              "accuracy": 0.9591836734693877,
+              "f1": 0.0,
+              "auc": 0.5851063829787234,
+              "undefined_reason": null
+            }
+          ],
+          "accuracy": 0.9591836734693877,
+          "macro_f1": 0.0,
+          "macro_ovr_auc": 0.5851063829787234
+        }
+      },
+      "concept_unavailable_reason": null
+    }
+  },
+  "final_validation": {
+    "diagnosis": {
+      "accuracy": 0.7755102040816326,
+      "balanced_accuracy": 0.7298245614035088,
+      "macro_f1": 0.7404910929224844,
+      "macro_ovr_auc": 0.7789473684210526,
+      "auc_undefined_reason": null,
+      "per_class_auc": {
+        "0": 0.7789473684210527,
+        "1": 0.7789473684210526
+      },
+      "support": {
+        "0": {
+          "positive": 30,
+          "negative": 19
+        },
+        "1": {
+          "positive": 19,
+          "negative": 30
+        }
+      },
+      "n": 49
+    },
+    "vision_language": {
+      "accuracy": 0.7551020408163265,
+      "balanced_accuracy": 0.7035087719298245,
+      "macro_f1": 0.7117647058823529,
+      "macro_ovr_auc": 0.8052631578947368,
+      "auc_undefined_reason": null,
+      "per_class_auc": {
+        "0": 0.8052631578947368,
+        "1": 0.8052631578947368
+      },
+      "support": {
+        "0": {
+          "positive": 30,
+          "negative": 19
+        },
+        "1": {
+          "positive": 19,
+          "negative": 30
+        }
+      },
+      "n": 49
+    },
+    "diagnosis_accuracy_wilson95": [
+      0.641212127640404,
+      0.8697502985034061
+    ],
+    "concept": {
+      "shape": {
+        "accuracy": 0.6326530612244898,
+        "balanced_accuracy": 0.42074592074592077,
+        "macro_f1": 0.4135135135135135,
+        "macro_ovr_auc": 0.6050891204876713,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.7140468227424749,
+          "1": 0.7053872053872055,
+          "2": 0.39583333333333337
+        },
+        "support": {
+          "0": {
+            "positive": 26,
+            "negative": 23
+          },
+          "1": {
+            "positive": 22,
+            "negative": 27
+          },
+          "2": {
+            "positive": 1,
+            "negative": 48
+          }
+        },
+        "n": 49,
+        "values": [
+          "irregular",
+          "oval",
+          "round"
+        ],
+        "majority_accuracy": 0.5306122448979592
+      },
+      "margin": {
+        "n": 49,
+        "attributes": [
+          {
+            "value": "circumscribed",
+            "positive": 27,
+            "negative": 22,
+            "accuracy": 0.6938775510204082,
+            "f1": 0.6511627906976745,
+            "auc": 0.7861952861952862,
+            "undefined_reason": null
+          },
+          {
+            "value": "indistinct",
+            "positive": 17,
+            "negative": 32,
+            "accuracy": 0.6326530612244898,
+            "f1": 0.5,
+            "auc": 0.7224264705882354,
+            "undefined_reason": null
+          },
+          {
+            "value": "angular",
+            "positive": 5,
+            "negative": 44,
+            "accuracy": 0.9183673469387755,
+            "f1": 0.5,
+            "auc": 0.859090909090909,
+            "undefined_reason": null
+          },
+          {
+            "value": "microlobulated",
+            "positive": 9,
+            "negative": 40,
+            "accuracy": 0.7959183673469388,
+            "f1": 0.0,
+            "auc": 0.6111111111111112,
+            "undefined_reason": null
+          },
+          {
+            "value": "spiculated",
+            "positive": 5,
+            "negative": 44,
+            "accuracy": 0.9183673469387755,
+            "f1": 0.3333333333333333,
+            "auc": 0.740909090909091,
+            "undefined_reason": null
+          }
+        ],
+        "accuracy": 0.7918367346938775,
+        "macro_f1": 0.39689922480620154,
+        "macro_ovr_auc": 0.7439465735789266
+      },
+      "echogenicity": {
+        "accuracy": 0.46938775510204084,
+        "balanced_accuracy": 0.16468253968253968,
+        "macro_f1": 0.12699659596753077,
+        "macro_ovr_auc": 0.6514459068651615,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.6649999999999999,
+          "1": 0.5673469387755101,
+          "2": 0.33333333333333337,
+          "3": 0.9444444444444444,
+          "4": 0.536231884057971,
+          "5": 0.8623188405797102
+        },
+        "support": {
+          "0": {
+            "positive": 24,
+            "negative": 25
+          },
+          "1": {
+            "positive": 14,
+            "negative": 35
+          },
+          "2": {
+            "positive": 1,
+            "negative": 48
+          },
+          "3": {
+            "positive": 4,
+            "negative": 45
+          },
+          "4": {
+            "positive": 3,
+            "negative": 46
+          },
+          "5": {
+            "positive": 3,
+            "negative": 46
+          }
+        },
+        "n": 49,
+        "values": [
+          "hypoechoic",
+          "heterogeneous",
+          "anechoic",
+          "isoechoic",
+          "complex cystic/solid",
+          "hyperechoic"
+        ],
+        "majority_accuracy": 0.4897959183673469
+      },
+      "posterior": {
+        "accuracy": 0.7959183673469388,
+        "balanced_accuracy": 0.4166666666666667,
+        "macro_f1": 0.456043956043956,
+        "macro_ovr_auc": 0.7973568199259283,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.7196078431372549,
+          "1": 0.7469512195121951,
+          "2": 0.8062015503875969,
+          "3": 0.9166666666666666
+        },
+        "support": {
+          "0": {
+            "positive": 34,
+            "negative": 15
+          },
+          "1": {
+            "positive": 8,
+            "negative": 41
+          },
+          "2": {
+            "positive": 6,
+            "negative": 43
+          },
+          "3": {
+            "positive": 1,
+            "negative": 48
+          }
+        },
+        "n": 49,
+        "values": [
+          "no",
+          "shadowing",
+          "enhancement",
+          "combined"
+        ],
+        "majority_accuracy": 0.6938775510204082
+      },
+      "halo": {
+        "n": 49,
+        "attributes": [
+          {
+            "value": "yes",
+            "positive": 16,
+            "negative": 33,
+            "accuracy": 0.7551020408163265,
+            "f1": 0.45454545454545453,
+            "auc": 0.8087121212121211,
+            "undefined_reason": null
+          }
+        ],
+        "accuracy": 0.7551020408163265,
+        "macro_f1": 0.45454545454545453,
+        "macro_ovr_auc": 0.8087121212121211
+      },
+      "calcifications": {
+        "accuracy": 0.9387755102040817,
+        "balanced_accuracy": 0.5,
+        "macro_f1": null,
+        "macro_ovr_auc": null,
+        "auc_undefined_reason": "At least one class lacks positives or negatives",
+        "per_class_auc": {
+          "0": 0.818840579710145,
+          "1": 0.7971014492753623,
+          "2": null
+        },
+        "support": {
+          "0": {
+            "positive": 46,
+            "negative": 3
+          },
+          "1": {
+            "positive": 3,
+            "negative": 46
+          },
+          "2": {
+            "positive": 0,
+            "negative": 49
+          }
+        },
+        "n": 49,
+        "values": [
+          "no",
+          "in a mass",
+          "intraductal"
+        ],
+        "majority_accuracy": 0.9387755102040817,
+        "f1_undefined_reason": "At least one declared category has no true examples"
+      },
+      "skin": {
+        "n": 49,
+        "attributes": [
+          {
+            "value": "yes",
+            "positive": 2,
+            "negative": 47,
+            "accuracy": 0.9591836734693877,
+            "f1": 0.0,
+            "auc": 0.7819148936170213,
+            "undefined_reason": null
+          }
+        ],
+        "accuracy": 0.9591836734693877,
+        "macro_f1": 0.0,
+        "macro_ovr_auc": 0.7819148936170213
+      }
+    },
+    "concept_vision_language": {
+      "shape": {
+        "accuracy": 0.673469387755102,
+        "balanced_accuracy": 0.4557109557109557,
+        "macro_f1": 0.4516221648004594,
+        "macro_ovr_auc": 0.7345521829217482,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.725752508361204,
+          "1": 0.707070707070707,
+          "2": 0.7708333333333334
+        },
+        "support": {
+          "0": {
+            "positive": 26,
+            "negative": 23
+          },
+          "1": {
+            "positive": 22,
+            "negative": 27
+          },
+          "2": {
+            "positive": 1,
+            "negative": 48
+          }
+        },
+        "n": 49,
+        "values": [
+          "irregular",
+          "oval",
+          "round"
+        ],
+        "majority_accuracy": 0.5306122448979592
+      },
+      "margin": {
+        "n": 49,
+        "attributes": [
+          {
+            "value": "circumscribed",
+            "positive": 27,
+            "negative": 22,
+            "accuracy": 0.6122448979591837,
+            "f1": 0.5365853658536586,
+            "auc": 0.6784511784511784,
+            "undefined_reason": null
+          },
+          {
+            "value": "indistinct",
+            "positive": 17,
+            "negative": 32,
+            "accuracy": 0.7551020408163265,
+            "f1": 0.625,
+            "auc": 0.7931985294117647,
+            "undefined_reason": null
+          },
+          {
+            "value": "angular",
+            "positive": 5,
+            "negative": 44,
+            "accuracy": 0.9183673469387755,
+            "f1": 0.5,
+            "auc": 0.7863636363636364,
+            "undefined_reason": null
+          },
+          {
+            "value": "microlobulated",
+            "positive": 9,
+            "negative": 40,
+            "accuracy": 0.8163265306122449,
+            "f1": 0.0,
+            "auc": 0.801388888888889,
+            "undefined_reason": null
+          },
+          {
+            "value": "spiculated",
+            "positive": 5,
+            "negative": 44,
+            "accuracy": 0.9183673469387755,
+            "f1": 0.3333333333333333,
+            "auc": 0.7681818181818182,
+            "undefined_reason": null
+          }
+        ],
+        "accuracy": 0.8040816326530612,
+        "macro_f1": 0.3989837398373984,
+        "macro_ovr_auc": 0.7655168102594574
+      },
+      "echogenicity": {
+        "accuracy": 0.42857142857142855,
+        "balanced_accuracy": 0.14583333333333334,
+        "macro_f1": 0.1076923076923077,
+        "macro_ovr_auc": 0.6802585116172072,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.6116666666666667,
+          "1": 0.5571428571428572,
+          "2": 0.5625,
+          "3": 0.7777777777777777,
+          "4": 0.8840579710144927,
+          "5": 0.6884057971014492
+        },
+        "support": {
+          "0": {
+            "positive": 24,
+            "negative": 25
+          },
+          "1": {
+            "positive": 14,
+            "negative": 35
+          },
+          "2": {
+            "positive": 1,
+            "negative": 48
+          },
+          "3": {
+            "positive": 4,
+            "negative": 45
+          },
+          "4": {
+            "positive": 3,
+            "negative": 46
+          },
+          "5": {
+            "positive": 3,
+            "negative": 46
+          }
+        },
+        "n": 49,
+        "values": [
+          "hypoechoic",
+          "heterogeneous",
+          "anechoic",
+          "isoechoic",
+          "complex cystic/solid",
+          "hyperechoic"
+        ],
+        "majority_accuracy": 0.4897959183673469
+      },
+      "posterior": {
+        "accuracy": 0.7755102040816326,
+        "balanced_accuracy": 0.3854166666666667,
+        "macro_f1": 0.4229820812099293,
+        "macro_ovr_auc": 0.7813680307630709,
+        "auc_undefined_reason": null,
+        "per_class_auc": {
+          "0": 0.7235294117647059,
+          "1": 0.7042682926829268,
+          "2": 0.8643410852713178,
+          "3": 0.8333333333333334
+        },
+        "support": {
+          "0": {
+            "positive": 34,
+            "negative": 15
+          },
+          "1": {
+            "positive": 8,
+            "negative": 41
+          },
+          "2": {
+            "positive": 6,
+            "negative": 43
+          },
+          "3": {
+            "positive": 1,
+            "negative": 48
+          }
+        },
+        "n": 49,
+        "values": [
+          "no",
+          "shadowing",
+          "enhancement",
+          "combined"
+        ],
+        "majority_accuracy": 0.6938775510204082
+      },
+      "halo": {
+        "n": 49,
+        "attributes": [
+          {
+            "value": "yes",
+            "positive": 16,
+            "negative": 33,
+            "accuracy": 0.6938775510204082,
+            "f1": 0.11764705882352941,
+            "auc": 0.7585227272727273,
+            "undefined_reason": null
+          }
+        ],
+        "accuracy": 0.6938775510204082,
+        "macro_f1": 0.11764705882352941,
+        "macro_ovr_auc": 0.7585227272727273
+      },
+      "calcifications": {
+        "accuracy": 0.9387755102040817,
+        "balanced_accuracy": 0.5,
+        "macro_f1": null,
+        "macro_ovr_auc": null,
+        "auc_undefined_reason": "At least one class lacks positives or negatives",
+        "per_class_auc": {
+          "0": 0.891304347826087,
+          "1": 0.9130434782608696,
+          "2": null
+        },
+        "support": {
+          "0": {
+            "positive": 46,
+            "negative": 3
+          },
+          "1": {
+            "positive": 3,
+            "negative": 46
+          },
+          "2": {
+            "positive": 0,
+            "negative": 49
+          }
+        },
+        "n": 49,
+        "values": [
+          "no",
+          "in a mass",
+          "intraductal"
+        ],
+        "majority_accuracy": 0.9387755102040817,
+        "f1_undefined_reason": "At least one declared category has no true examples"
+      },
+      "skin": {
+        "n": 49,
+        "attributes": [
+          {
+            "value": "yes",
+            "positive": 2,
+            "negative": 47,
+            "accuracy": 0.9591836734693877,
+            "f1": 0.0,
+            "auc": 0.5851063829787234,
+            "undefined_reason": null
+          }
+        ],
+        "accuracy": 0.9591836734693877,
+        "macro_f1": 0.0,
+        "macro_ovr_auc": 0.5851063829787234
+      }
+    },
+    "concept_unavailable_reason": null
+  },
+  "status": "complete",
+  "updates": 1000,
+  "elapsed_seconds": 489.79217630799394,
+  "peak_cuda_allocated_bytes": 3966548992,
+  "seed": 0,
+  "concept_stage_gate_passed": false,
+  "concept_stage_gate_reason": "Requires per-group validation and M1 review before M2"
+}
